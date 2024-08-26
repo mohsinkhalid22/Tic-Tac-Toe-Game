@@ -10,6 +10,10 @@ body {
 
 .container {
     height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
 }
 
 .game {
@@ -25,4 +29,18 @@ body {
 .box {
     height: 18vmin;
     width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    color: rgb(126, 110, 215);
+}
+
+#reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: rgb(172, 36, 36);
+    color: rgb(188, 218, 244);
+    border-radius: 1rem;
+    border: none;
 }
