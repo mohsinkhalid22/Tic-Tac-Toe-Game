@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    height: 70vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,14 @@ body {
     gap: 1.5vmin;
 }
 
+red {
+    color: red;
+}
+
+green {
+    color: green;
+}
+
 .box {
     height: 18vmin;
     width: 18vmin;
@@ -34,13 +42,41 @@ body {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     font-size: 8vmin;
     color: rgb(126, 110, 215);
+    background-color: rgb(96, 125, 61);
 }
 
 #reset-btn {
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     background-color: rgb(172, 36, 36);
     color: rgb(188, 218, 244);
     border-radius: 1rem;
     border: none;
+}
+
+#new-btn {
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: rgb(172, 36, 36);
+    color: rgb(188, 218, 244);
+    border-radius: 1rem;
+    border: none;
+}
+
+#msg {
+    color: rgb(112, 198, 112);
+    font-size: 5vmin;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide {
+    display: none;
 }
