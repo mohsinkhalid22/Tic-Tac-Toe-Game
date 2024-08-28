@@ -64,22 +64,33 @@ const showWinner = (winner) => {
 };
 
 const checkWinner = () => {
+    let isDraw = true;
     for (let pattern of winPatterns) {
         let pos1Val = boxes[pattern[0]].innerText;
         let pos2Val = boxes[pattern[1]].innerText;
         let pos3Val = boxes[pattern[2]].innerText;
 
-        if (pos1Val != "" && pos2Val != "" && pos3Val != ""){
+        if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
             if (pos1Val === pos2Val && pos2Val === pos3Val) {
                 showWinner(pos1Val);
                 return true;
             }
-        }else {
-            msg.innerHTML="Match is draw";
-            msg.classList.remove("hide");
-           }
+        } else {
+            isDraw = false; // If any box is empty, it's not a draw yet
+        }
+    }
+
+    if (isDraw) {
+        showDraw();
     }
 };
+
+const showDraw = () => {
+    msg.innerText = "It's a Draw!";
+    msgContainer.classList.remove("hide");
+    disableBoxes();
+};
+
 
 newGameBtn.addEventListener("click", resetGame);
 resetBtn.addEventListener("click", resetGame);
